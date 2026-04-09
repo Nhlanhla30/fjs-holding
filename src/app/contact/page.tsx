@@ -15,8 +15,7 @@ import {
   Clock,
 } from "lucide-react";
 
-// IMPORTANT: Replace YOUR_FORM_ID with your actual Formspree form ID
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const WEB3FORMS_KEY = "0734a7db-3a83-46bd-bd7b-03a4fe6073de";
 
 const serviceOptions = [
   "Commercial Construction",
@@ -54,16 +53,20 @@ export default function ContactPage() {
     setStatus("submitting");
 
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          ...formData,
+        }),
       });
 
-      if (res.ok) {
+      const data = await res.json();
+      if (data.success) {
         setStatus("success");
         setFormData({
           name: "",
