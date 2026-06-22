@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="180" viewBox="0 0 1440 180" preserveAspectRatio="none" fill="none">
+  <!-- Topographic contour divider. Drop between sections (full-bleed, height auto).
+       The longest path carries a draw-on animation hook via stroke-dashoffset. -->
+  <defs>
+    <linearGradient id="tg" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2A8FCB"/>
+      <stop offset="1" stop-color="#2E7D52"/>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#tg)" fill="none">
+    <path d="M0 150 C 240 110, 380 110, 560 140 S 940 180, 1140 130 1440 90" stroke-opacity="0.10" stroke-width="1.5"/>
+    <path d="M0 120 C 220 80, 420 96, 600 110 S 980 150, 1180 96 1440 60"  stroke-opacity="0.16" stroke-width="1.5"/>
+    <path class="topo-lead" d="M0 92 C 260 52, 430 70, 640 84 S 1000 120, 1220 64 1440 34"
+          stroke-opacity="0.34" stroke-width="2"/>
+    <path d="M0 64 C 240 30, 460 48, 700 58 S 1040 92, 1260 40 1440 14"  stroke-opacity="0.16" stroke-width="1.5"/>
+  </g>
+  <!-- survey nodes -->
+  <g fill="#2A8FCB">
+    <circle cx="640" cy="84" r="3" fill-opacity="0.6"/>
+    <circle cx="1220" cy="64" r="3" fill="#2E7D52" fill-opacity="0.6"/>
+    <circle cx="260" cy="52" r="2.5" fill-opacity="0.45"/>
+  </g>
+</svg>

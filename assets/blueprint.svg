@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <!-- Tileable blueprint grid. Use as a repeating background-image over dark sections.
+       Lines are white at low opacity so they read on the charcoal brand background. -->
+  <defs>
+    <pattern id="fine" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="160" height="160" fill="url(#fine)"/>
+  <!-- bolder major lines every 80px -->
+  <path d="M0 0H160M0 80H160M0 160H160M0 0V160M80 0V160M160 0V160"
+        fill="none" stroke="#2A8FCB" stroke-opacity="0.10" stroke-width="1.2"/>
+  <!-- corner registration ticks -->
+  <g stroke="#2A8FCB" stroke-opacity="0.28" stroke-width="1.4">
+    <path d="M80 72V88M72 80H88"/>
+  </g>
+  <circle cx="80" cy="80" r="2.2" fill="#2E7D52" fill-opacity="0.5"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <!-- Abstract engineering constellation for hero/section backdrops.
+       Self-animating (SMIL) so it works even without JS; pair with a dark overlay.
+       For a heavier effect, drive the same node set from a <canvas> in site.js. -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="70%">
+      <stop offset="0" stop-color="#2A8FCB" stop-opacity="0.18"/>
+      <stop offset="0.55" stop-color="#2E7D52" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#141719" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2A8FCB"/>
+      <stop offset="1" stop-color="#2E7D52"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g stroke="url(#line)" stroke-opacity="0.22" stroke-width="1">
+    <path d="M180 160 L520 300 L900 180 L1300 320 L1500 200"/>
+    <path d="M120 520 L440 640 L760 520 L1080 700 L1440 560"/>
+    <path d="M520 300 L440 640 M900 180 L760 520 M1300 320 L1080 700 M180 160 L120 520 M1500 200 L1440 560"/>
+    <path d="M520 300 L760 520 M900 180 L1080 700"/>
+  </g>
+  <g fill="#7cc6f0">
+    <circle cx="180" cy="160" r="3.5"><animate attributeName="r" values="3.5;5;3.5" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="900" cy="180" r="4"><animate attributeName="r" values="4;6;4" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="1300" cy="320" r="3"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="440" cy="640" r="3.5" fill="#5fd29a"><animate attributeName="r" values="3.5;5.5;3.5" dur="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="1080" cy="700" r="4" fill="#5fd29a"><animate attributeName="opacity" values="0.5;1;0.5" dur="6s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="520" r="3"><animate attributeName="r" values="3;4.5;3" dur="3.8s" repeatCount="indefinite"/></circle>
+    <circle cx="1500" cy="200" r="2.6" fill="#5fd29a"/>
+    <circle cx="120" cy="520" r="2.6"/>
+  </g>
+</svg>
